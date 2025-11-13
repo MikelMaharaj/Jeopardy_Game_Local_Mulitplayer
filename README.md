@@ -36,3 +36,5 @@ Choose **Generate Report** to save a TXT file anywhere. The template can be exte
 - Factory Method (LoaderFactory)
 - Template Method (ReportWriter)
 - UI and services decoupled; loaders/reporters swappable; single responsibilities per class.
+
+#Created by Mikel Maharaj
