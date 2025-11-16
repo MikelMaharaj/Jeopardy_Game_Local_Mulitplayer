@@ -37,6 +37,6 @@ Choose **Generate Report** to save a TXT file anywhere. The template can be exte
 - Template Method (ReportWriter)
 - UI and services decoupled; loaders/reporters swappable; single responsibilities per class.
 
-[View the Class Diagram](ClassDiagram.md)
+[View the Class Diagram](ClassDiagram.png)
 
 **Created by Mikel Maharaj**
