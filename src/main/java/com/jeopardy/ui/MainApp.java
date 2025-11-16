@@ -92,7 +92,7 @@ public class MainApp extends Application {
             if (f != null) {
                 try {
                     // Initialize with SYSTEM logger and board loader
-                    String eventsPath = Path.of(System.getProperty("user.home"), "jeopardy_event_log.csv").toString();
+                    String eventsPath = Path.of(System.getProperty("user.home"), "Desktop","game_event_log.csv").toString();
                     EventLogger logger = new EventLogger(eventsPath, true);
                     service = new GameService(LoaderFactory.fromPath(f.getAbsolutePath()), logger);
 
