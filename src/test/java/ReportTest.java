@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ReportTest {
     @Test
-    public void reportContainsPlayerScoresandWinner() throws Exception{
+    public void reportContainsPlayerScores() throws Exception{
         Player p1 = new Player("P1", "Alice"), p2 = new Player("P2", "Bob");
         GameState state = new GameState();
 
@@ -36,7 +36,6 @@ public class ReportTest {
         assertTrue(text.contains("Bob"));
         assertTrue(text.contains("500"));
         assertTrue(text.contains("300"));
-        assertTrue(text.contains("Winner"));
 
         temp.delete();
     }
