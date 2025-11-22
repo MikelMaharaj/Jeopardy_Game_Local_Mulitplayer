@@ -11,24 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 
-/**
- * XML loader adjusted for files structured like:
- * <JeopardyQuestions>
- *   <QuestionItem>
- *     <Category>Variables &amp; Data Types</Category>
- *     <Value>100</Value>
- *     <QuestionText>Which ...</QuestionText>
- *     <Options>
- *       <OptionA>...</OptionA>
- *       <OptionB>...</OptionB>
- *       <OptionC>...</OptionC>
- *       <OptionD>...</OptionD>
- *     </Options>
- *     <CorrectAnswer>A</CorrectAnswer>
- *   </QuestionItem>
- *   ...
- * </JeopardyQuestions>
- */
 public class XmlBoardLoader implements BoardLoader {
     private final String path;
 
