@@ -31,7 +31,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) {
-        stage.setTitle("Jeopardy (Starter)");
+        stage.setTitle("Jeopardy!");
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(10));
 
@@ -46,6 +46,7 @@ public class MainApp extends Application {
         // Left: categories & clues
         GridPane left = new GridPane();
         left.setHgap(8); left.setVgap(8); left.setPadding(new Insets(8));
+        left.getStyleClass().add("jeopardy-board");
         categoriesList = new ListView<>();
         cluesList = new ListView<>();
         left.add(new Label("Categories"), 0, 0);
@@ -58,8 +59,10 @@ public class MainApp extends Application {
         GridPane center = new GridPane();
         center.setHgap(8); center.setVgap(8); center.setPadding(new Insets(8));
         currentPlayerLabel = new Label("Current: -");
+        currentPlayerLabel.getStyleClass().add("status-label");
         questionArea = new TextArea();
         questionArea.setEditable(false);
+        questionArea.getStyleClass().add("question-text");
         optionsGroup = new ToggleGroup();
         RadioButton a = new RadioButton("A");
         RadioButton b = new RadioButton("B");
@@ -69,11 +72,27 @@ public class MainApp extends Application {
         b.setToggleGroup(optionsGroup);
         c.setToggleGroup(optionsGroup);
         d.setToggleGroup(optionsGroup);
+
+        a.getStyleClass().add("answer-radio");
+        b.getStyleClass().add("answer-radio");
+        c.getStyleClass().add("answer-radio");
+        d.getStyleClass().add("answer-radio");
+
         Button submit = new Button("Submit Answer");
+        submit.getStyleClass().add("action-button");
+
+        //
         center.add(currentPlayerLabel, 0, 0);
-        center.add(new Label("Question"), 0, 1);
+
+        Label questionLabel = new Label("Question");
+        questionLabel.getStyleClass().add("question-text-label");
+        center.add(questionLabel, 0, 1);
+
         center.add(questionArea, 0, 2);
-        center.add(new Label("Options: choose A/B/C/D and click Submit"), 0, 3);
+
+        Label optionsLabel = new Label("Options: choose A/B/C/D and click Submit");
+        optionsLabel.getStyleClass().add("options-label");
+        center.add(optionsLabel, 0, 3);
         center.add(a, 0, 4);
         center.add(b, 0, 5);
         center.add(c, 0, 6);
@@ -171,8 +190,19 @@ public class MainApp extends Application {
             }
         });
 
-        stage.setScene(new Scene(root, 950, 600));
+        //css + javafx
+        Scene scene = new Scene(root, 1000, 900);
+
+        var cssUrl = getClass().getResource("/styles/style.css");
+        if (cssUrl != null) {
+            scene.getStylesheets().add(cssUrl.toExternalForm());
+        } else {
+            System.err.println("WARN: /styles/style.css not found on classpath");
+        }
+
+        stage.setScene(scene);
         stage.show();
+
     }
 
     

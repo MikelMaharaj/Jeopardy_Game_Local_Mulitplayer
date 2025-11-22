@@ -1,0 +1,167 @@
+/* ========= Global ========= */
+
+/* Deep blue background + bold display font */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #07104a 0%, rgb(0, 49, 136) 100%);
+    -fx-font-family: "Impact", "Arial Black", "Franklin Gothic Heavy", "Arial";
+}
+
+/* ========= Left board panel (categories & clues lists) ========= */
+
+.jeopardy-board {
+    -fx-background-color: #02063d;
+    -fx-padding: 10;
+    -fx-background-radius: 8;
+    -fx-border-color: #404080;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+/* Labels like "Categories" / "Clues" in the left pane */
+.jeopardy-board .label {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ListViews themselves */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: #02063d;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Items in the lists (category names, $100, $200, etc.) */
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 8 4 8;
+}
+
+.list-cell:filled:selected, .list-cell:filled:selected:focused {
+    -fx-background-color: #1e90ff;
+    -fx-text-fill: #ffffff;
+}
+
+/* ========= Status / current player ========= */
+
+.status-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #000000, 4, 0.4, 0, 1);
+}
+
+/* ========= Question area & options ========= */
+
+/* Question text area in the center */
+.question-text {
+    -fx-control-inner-background: #001050;
+    -fx-text-fill: #ffd700;       /* bright gold on deep blue */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #000000, 3, 0.5, 0, 1);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* "Question" / "Options" labels in center pane */
+.question-text-label,
+.options-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Radio buttons A/B/C/D */
+.answer-radio {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* Highlight selected answer slightly */
+.radio-button:selected .text {
+    -fx-font-weight: bold;
+}
+
+/* ========= Buttons ========= */
+
+/* Submit Answer / toolbar buttons base look */
+.button {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+/* Action buttons (submit) */
+.action-button {
+    -fx-background-color: #ffd700;
+    -fx-text-fill: #000033;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Hover/pressed states */
+.action-button:hover {
+    -fx-background-color: #ffe766;
+}
+
+.action-button:pressed {
+    -fx-background-color: #e0c000;
+}
+
+/* Toolbar at top */
+.tool-bar {
+    -fx-background-color: rgba(0, 0, 0, 0.23);
+    -fx-padding: 6;
+}
+
+.tool-bar .button {
+    -fx-background-color: #00008b;
+    -fx-text-fill: #ffd700;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 4 10 4 10;
+}
+
+.tool-bar .button:hover {
+    -fx-background-color: #1e90ff;
+}
+
+/* ========= (Optional) future grid-style board ========= */
+/* If you ever move to a full Jeopardy grid, these are ready */
+
+/* Category headers */
+.category-header {
+    -fx-background-color: #00008b;
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2;
+}
+
+/* Question value buttons ($100, $200, etc.) */
+.clue-button {
+    -fx-background-color: #0000cd;
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120;
+    -fx-pref-height: 60;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2;
+}
+
+.clue-button:hover {
+    -fx-background-color: #1e90ff;
+}
+
+.clue-button:disabled {
+    -fx-opacity: 0.3;
+}
