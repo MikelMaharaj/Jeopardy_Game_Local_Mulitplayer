@@ -39,4 +39,8 @@ Choose **Generate Report** to save a TXT file anywhere. The template can be exte
 
 [View the Class Diagram](ClassDiagram.png)
 
+## Test Summary
+- **Logging Test**: Tests to see if the file created writes a header file and if the logger properly logs event lines
+- **Report Test**: Tests to see if reports generated contains player names and respective scores
+
 **Created by Mikel Maharaj**
