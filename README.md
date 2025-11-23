@@ -25,11 +25,12 @@ mvn -q -Djavafx.platform=win javafx:run
 - **CSV**: `src/main/resources/board/sample_game.csv`
 
 ## Event Log
-Writes to `~/jeopardy_event_log.csv` with columns:
+Writes to `~/game_event_log.csv` with columns:
 `Case_ID,Player_ID,Activity,Timestamp,Category,Question_Value,Answer_Given,Result,Score_After_Play`
+and saves to Desktop
 
 ## Report
-Choose **Generate Report** to save a TXT file anywhere. The template can be extended or replaced with PDF/DOCX later.
+Choose **Generate Report** to save a TXT file anywhere.
 
 ## Patterns & SOLID
 - Strategy (BoardLoader)
@@ -42,5 +43,6 @@ Choose **Generate Report** to save a TXT file anywhere. The template can be exte
 ## Test Summary
 - **Logging Test**: Tests to see if the file created writes a header file and if the logger properly logs event lines
 - **Report Test**: Tests to see if reports generated contains player names and respective scores
+- **Parsers Test**: Verifies that JSON, XML, and CSV board files are correctly parsed into categories and clues, ensuring category names, question values, question text, options (A–D), and the correct answer are all loaded as expected.
 
 **Created by Mikel Maharaj**
