@@ -45,4 +45,13 @@ Choose **Generate Report** to save a TXT file anywhere.
 - **Report Test**: Tests to see if reports generated contains player names and respective scores
 - **Parsers Test**: Verifies that JSON, XML, and CSV board files are correctly parsed into categories and clues, ensuring category names, question values, question text, options (A–D), and the correct answer are all loaded as expected.
 
+
+## JavaDoc
+[View the JavaDoc](https://mikelmaharaj.github.io/Jeopardy_Game_Local_Mulitplayer/)
+
+
+
+-------
+
+
 **Created by Mikel Maharaj**
