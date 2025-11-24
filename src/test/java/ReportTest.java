@@ -13,29 +13,29 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ReportTest {
     @Test
     public void reportContainsPlayerScores() throws Exception{
-        Player p1 = new Player("P1", "Alice"), p2 = new Player("P2", "Bob");
-        GameState state = new GameState();
+        Player player1 = new Player("Player 1", "P1"), player2 = new Player("Player 2", "P2");
+        GameState gameState = new GameState();
 
-        p1.addScore(500);
-        p2.addScore(300);
+        player1.addScore(500);
+        player2.addScore(300);
 
-        List<Player> players = new ArrayList<>();
-        players.add(p1);
-        players.add(p2);
+        List<Player> playerList = new ArrayList<>();
+        playerList.add(player1);
+        playerList.add(player2);
 
-        state.setPlayers(players);
+        gameState.setPlayers(playerList);
 
         File temp = File.createTempFile("report", ".txt");
-        TxtReportWriter writer = new TxtReportWriter();
+        TxtReportWriter reportWriter = new TxtReportWriter();
 
-        writer.generate(state, temp.getAbsolutePath());
+        reportWriter.generate(gameState, temp.getAbsolutePath());
 
-        String text = Files.readString(temp.toPath());
+        String scores = Files.readString(temp.toPath());
 
-        assertTrue(text.contains("Alice"));
-        assertTrue(text.contains("Bob"));
-        assertTrue(text.contains("500"));
-        assertTrue(text.contains("300"));
+        assertTrue(scores.contains("P1"));
+        assertTrue(scores.contains("P2"));
+        assertTrue(scores.contains("500"));
+        assertTrue(scores.contains("300"));
 
         temp.delete();
     }
