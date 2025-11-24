@@ -44,6 +44,7 @@ Choose **Generate Report** to save a TXT file anywhere.
 - **Logging Test**: Tests to see if the file created writes a header file and if the logger properly logs event lines
 - **Report Test**: Tests to see if reports generated contains player names and respective scores
 - **Parsers Test**: Verifies that JSON, XML, and CSV board files are correctly parsed into categories and clues, ensuring category names, question values, question text, options (A–D), and the correct answer are all loaded as expected.
+- **Gameplay and Scoring Test**: Verifies that a player's score increases or decreases when a question is respectively answered correctly or incorrectly. Verifies that after a player answers a question, game rotates to the next player, and the rotation occurs in correct order.
 
 
 ## JavaDoc
