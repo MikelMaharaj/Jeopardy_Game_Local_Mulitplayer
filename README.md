@@ -50,9 +50,11 @@ Choose **Generate Report** to save a TXT file anywhere.
 ## JavaDoc
 [View the JavaDoc](https://mikelmaharaj.github.io/Jeopardy_Game_Local_Mulitplayer/)
 
+---
 
+## View the wiki for more information
+[Click here for wiki](https://github.com/MikelMaharaj/Jeopardy_Game_Local_Mulitplayer/wiki)
 
--------
-
+---
 
 **Created by Mikel Maharaj**
